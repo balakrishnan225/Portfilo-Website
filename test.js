@@ -1,3 +1,3 @@
-for (let i = 0; i < 10000 * 8000; i++) {
+for (let i = 0; i < 100 * 800; i++) {
  console.log(i)
 }
