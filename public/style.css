@@ -72,16 +72,13 @@ nav {
  cursor: pointer;
 }
 .hero {
- background-size: 200% 200%;
- animation: gradientAnimation 2s ease infinite;
- background-size: cover;
- background-position: center;
  height: 100vh;
  display: flex;
  align-items: center;
  justify-content: center;
  text-align: center;
  color: #fafafa;
+ background: url(./images/6913518_Motion\ Graphics_Motion\ Graphic_1280x720.mp4);
 }
 @keyframes gradientAnimation {
  0% {
