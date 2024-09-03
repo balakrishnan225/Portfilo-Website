@@ -138,3 +138,22 @@ document.querySelector(".show-message-btn").addEventListener("click", function (
   messageDiv.classList.add("hidden");
  }, 4500);
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const readMoreLinks = document.querySelectorAll('.read-more');
+
+    readMoreLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const testimonialText = link.previousElementSibling;
+
+            if (testimonialText.classList.contains('expanded')) {
+                testimonialText.classList.remove('expanded');
+                link.textContent = 'Read More';
+            } else {
+                testimonialText.classList.add('expanded');
+                link.textContent = 'Read Less';
+            }
+        });
+    });
+});
+
