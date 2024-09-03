@@ -18,6 +18,7 @@ body {
  color: var(--text-color);
  background-size: 200% 200%;
  animation: gradientAnimation 2s ease infinite;
+ background: #004c42;
 }
 
 .container {
