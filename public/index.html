@@ -3,174 +3,141 @@
  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Expanded Computer Knowledge Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <title>Frontend Duo - Web Development Portfolio</title>
+  <meta name="description" content="Portfolio showcasing the work of two talented front-end developers specializing in modern web technologies." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./css/index.css" />
  </head>
  <body>
   <header>
-   <h1>Expanded Computer Knowledge Portfolio</h1>
-   <p class="subtitle">A dialogue between two tech enthusiasts</p>
+   <nav class="container">
+    <div class="logo">Frontend Duo</div>
+    <ul class="nav-links">
+     <li><a href="#home">Home</a></li>
+     <li><a href="#about">About</a></li>
+     <li><a href="#portfolio">Portfolio</a></li>
+     <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+     <i class="fas fa-bars"></i>
+    </div>
+   </nav>
   </header>
 
-  <nav>
-   <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#profiles">Profiles</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-   </ul>
-  </nav>
-
-  <main class="container">
-   <section id="profiles">
-    <h2>Our Profiles</h2>
-    <div class="profile">
-     <div class="person">
-      <img src="css/c71c4f1b69974740b8d1c58c60ab1868-free.png" alt="BossKing" class="profile-image" />
-      <h3>BossKing</h3>
-      <p>Software Developer with 3 months of experience</p>
-      <h4>Areas of Expertise:</h4>
-      <ul>
-       <li>Web Development</li>
-       <li>Software Development</li>
-       <li>Graphic Designing</li>
-       <li>Mobile app development</li>
-      </ul>
-      <p class="quote">"I believe I can achieve a lot if I put my mind to it"</p>
-     </div>
-     <div class="person">
-      <img src="./css/fxap.jpg" alt="FXastro" class="profile-image" />
-      <h3>FXastro</h3>
-      <p>Systems Administrator with 8 years of experience</p>
-      <h4>Areas of Expertise:</h4>
-      <ul>
-       <li>JavaScript coding</li>
-       <li>API development</li>
-       <li>Virtualization</li>
-       <li>IT infrastructure</li>
-      </ul>
-      <p class="quote">"I'm Daniel, a student dev using Node.js and JavaScript to solve annoying issues."</p>
-     </div>
+  <main>
+   <section id="home" class="hero">
+    <div class="hero-content">
+     <h1>We Create Amazing Web Experiences</h1>
+     <p>Two passionate front-end developers bringing your ideas to life</p>
+     <a href="#portfolio" class="btn">View Our Work</a>
     </div>
    </section>
 
-   <section id="projects">
-    <h2>Our Projects</h2>
-    <div class="projects-grid">
-     <div class="project">
-      <img src="./css/blueeyed-cyborg-woman-watches-futuristic-computer-data-generated-by-ai.jpg" alt="Cloud Migration Project" class="project-image" />
-      <div class="project-content">
-       <h3>Cloud Migration Project</h3>
-       <p>Successfully migrated a large-scale application to a cloud-based infrastructure, improving scalability and reducing operational costs by 30%.</p>
-       <div class="tags">
-        <span class="tag">Cloud Computing</span>
-        <span class="tag">DevOps</span>
-       </div>
+   <section id="about" class="container">
+    <h2>About Us</h2>
+    <div class="about-content">
+     <div class="developer">
+      <img src="./images/astros.jpg" alt="Developer 1" />
+      <h3>Astro</h3>
+      <p>Experienced front-end developer with a passion for creating intuitive and responsive user interfaces.</p>
+      <div class="skills">
+       <span class="skill">HTML5</span>
+       <span class="skill">CSS3</span>
+       <span class="skill">JavaScript</span>
+       <span class="skill">React</span>
+       <span class="skill">Vue.js</span>
       </div>
      </div>
-     <div class="project">
-      <img src="./css/businessman-pointing-global-communication-touchscreen-generated-by-ai.jpg" alt="E-commerce Website" class="project-image" />
-      <div class="project-content">
-       <h3>E-commerce Website</h3>
-       <p>Developed a full-stack e-commerce platform with features like user authentication, product catalog, and secure payment integration.</p>
-       <div class="tags">
-        <span class="tag">Web Development</span>
-        <span class="tag">Full Stack</span>
-       </div>
-      </div>
-     </div>
-     <div class="project">
-      <img src="./css/central-computer-processor-with-neon-lights-integrated-microchip-circuit-board-server.jpg" alt="RESTful API Development" class="project-image" />
-      <div class="project-content">
-       <h3>RESTful API Development</h3>
-       <p>Created a robust RESTful API for a social media platform, handling user interactions, content management, and data analytics.</p>
-       <div class="tags">
-        <span class="tag">API Development</span>
-        <span class="tag">Backend</span>
-       </div>
-      </div>
-     </div>
-     <div class="project">
-      <img src="./css/futurism-perspective-digital-nomads-lifestyle.jpg" alt="Mobile App for Fitness Tracking" class="project-image" />
-      <div class="project-content">
-       <h3>Mobile App for Fitness Tracking</h3>
-       <p>Designed and developed a cross-platform mobile app for fitness enthusiasts to track workouts, set goals, and analyze progress.</p>
-       <div class="tags">
-        <span class="tag">Mobile Development</span>
-        <span class="tag">UX/UI Design</span>
-       </div>
-      </div>
-     </div>
-     <div class="project">
-      <img src="./css/futuristic-molecule-patterns-connect-genetic-research-discovery-generated-by-ai.jpg" alt="Machine Learning for Predictive Maintenance" class="project-image" />
-      <div class="project-content">
-       <h3>ML for Predictive Maintenance</h3>
-       <p>Implemented a machine learning model to predict equipment failures in a manufacturing plant, reducing downtime and maintenance costs.</p>
-       <div class="tags">
-        <span class="tag">Machine Learning</span>
-        <span class="tag">Data Science</span>
-       </div>
-      </div>
-     </div>
-     <div class="project">
-      <img src="./css/view-male-engineer-work-engineers-day-celebration.jpg" alt="Cybersecurity Assessment Tool" class="project-image" />
-      <div class="project-content">
-       <h3>Cybersecurity Assessment Tool</h3>
-       <p>Developed an automated tool for conducting cybersecurity assessments, identifying vulnerabilities, and providing remediation recommendations.</p>
-       <div class="tags">
-        <span class="tag">Cybersecurity</span>
-        <span class="tag">Automation</span>
-       </div>
+     <div class="developer">
+      <img src="./images/king.avif" alt="Developer 2" />
+      <h3>King</h3>
+      <p>Creative front-end developer specializing in modern web technologies and performance optimization.</p>
+      <div class="skills">
+       <span class="skill">HTML5</span>
+       <span class="skill">CSS3</span>
+       <span class="skill">JavaScript</span>
+       <span class="skill">Angular</span>
+       <span class="skill">TypeScript</span>
       </div>
      </div>
     </div>
    </section>
 
-   <section id="contact">
-    <h2>Contact Us</h2>
-    <form id="contactForm">
-     <label for="name">Name:</label>
-     <input type="text" id="name" name="name" required />
+   <section id="portfolio" class="container">
+    <h2>Our Portfolio</h2>
+    <div class="portfolio-filters">
+     <button class="filter-btn active" data-filter="all">All</button>
+     <button class="filter-btn" data-filter="web">Web Design</button>
+     <button class="filter-btn" data-filter="app">Web Apps</button>
+     <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+    </div>
+    <div class="portfolio-grid">
+     <div class="portfolio-item" data-category="web">
+      <img src="./images/restaurant.avif" alt="Project 1" />
+      <div class="portfolio-item-content">
+       <h3>Modern Restaurant Website</h3>
+       <p>A responsive website for a high-end restaurant with online reservation system.</p>
+       <a href="#" class="btn">View Project</a>
+      </div>
+     </div>
+     <div class="portfolio-item" data-category="app">
+      <img src="./images/taskmanager.jpg" alt="Project 2" />
+      <div class="portfolio-item-content">
+       <h3>Task Management App</h3>
+       <p>A feature-rich web application for managing tasks and team collaboration.</p>
+       <a href="#" class="btn">View Project</a>
+      </div>
+     </div>
+     <div class="portfolio-item" data-category="ecommerce">
+      <img src="./images/fashion.jpg" alt="Project 3" />
+      <div class="portfolio-item-content">
+       <h3>Fashion E-commerce Store</h3>
+       <p>A stylish and user-friendly online store for a fashion brand.</p>
+       <a href="#" class="btn">View Project</a>
+      </div>
+     </div>
+     <div class="portfolio-item" data-category="web">
+      <img src="./images/travel.jpg" alt="Project 4" />
+      <div class="portfolio-item-content">
+       <h3>Travel Blog</h3>
+       <p>A visually appealing blog website for sharing travel experiences and tips.</p>
+       <a href="#" class="btn">View Project</a>
+      </div>
+     </div>
+    </div>
+   </section>
 
-     <label for="email">Email:</label>
-     <input type="email" id="email" name="email" required />
-
-     <label for="message">Message:</label>
-     <textarea id="message" name="message" required></textarea>
-
-     <button type="submit">Send Message</button>
+   <section id="contact" class="container">
+    <h2>Get in Touch</h2>
+    <form class="contact-form">
+     <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+     </div>
+     <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+     </div>
+     <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+     </div>
+     <button type="submit" class="btn">Send Message</button>
     </form>
+    <div class="social-links">
+     <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+     <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
    </section>
   </main>
 
   <footer>
-   <p>&copy; 2024 BossKing & FXastro. All rights reserved.</p>
+   <p>&copy; 2023 Frontend Duo. All rights reserved.</p>
   </footer>
-
-  <div id="thankYouPopup" class="popup">
-   <div class="checkmark">✔</div>
-   <p>Thank you for your response,we will get in touch!</p>
-  </div>
-
-  <script>
-   document.getElementById('contactForm').addEventListener('submit', function (event) {
-    event.preventDefault()
-
-    var popup = document.getElementById('thankYouPopup')
-
-    popup.classList.add('show')
-
-    setTimeout(function () {
-     popup.classList.add('hide')
-    }, 2000)
-
-    setTimeout(function () {
-     popup.classList.remove('show', 'hide')
-    }, 2500)
-
-    this.reset()
-   })
-  </script>
  </body>
+ <script src="./js/index.js"></script>
 </html>
