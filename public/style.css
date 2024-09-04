@@ -500,3 +500,7 @@ p {
     position: relative;
     top: -100px;
 }
+
+header{
+    backdrop-filter: blur(25px);
+}
