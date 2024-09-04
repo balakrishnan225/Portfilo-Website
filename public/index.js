@@ -160,16 +160,16 @@ const testimonialContainer = document.querySelector('.testimonial-container');
 
 function autoScrollTestimonials() {
     testimonialContainer.scrollBy({
-        left: 1, // Scroll horizontally
+        left: 1, 
         behavior: 'smooth'
     });
     
-    // Scroll to the start if we've reached the end
+
     if (testimonialContainer.scrollLeft + testimonialContainer.clientWidth >= testimonialContainer.scrollWidth) {
         testimonialContainer.scrollLeft = 0;
     }
 }
 
-// Start the auto-scrolling
-setInterval(autoScrollTestimonials, 50); // Adjust the interval as needed
+
+setInterval(autoScrollTestimonials, 50); 
 
