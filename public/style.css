@@ -147,7 +147,7 @@ nav {
 }
 
 h2 {
- font-size: 2.5rem;
+ font-size: 1.5rem;
  margin-bottom: 2rem;
  text-align: center;
  color: #fafafa;
@@ -285,7 +285,7 @@ h2 {
 
 .portfolio-item p {
  color: #fafafa;
- font-size: 0.9rem;
+ font-size: 0.8rem;
  margin-bottom: 1rem;
  text-align: center;
 }
@@ -520,16 +520,4 @@ header{
     right: -450px;
     margin-bottom: 50px;
     bottom: -35px;
-}
-a{
-    color: #333;
-    padding: 0.8rem 1.6rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
 }
