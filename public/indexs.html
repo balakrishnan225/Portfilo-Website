@@ -43,6 +43,7 @@
     height: 100px; /* Thumbnail size */
     border-radius: 50%; /* Circle thumbnail */
     margin-bottom: 15px;
+    background-color: brown;
    }
 
    .project h2 {
@@ -99,16 +100,14 @@
      const projects = await response.json();
 
      const projectContainer = document.getElementById("project-container");
-     projectContainer.innerHTML = ""; 
+     projectContainer.innerHTML = ""; // Clear any existing content
 
      projects.forEach(project => {
       const projectElement = document.createElement("div");
       projectElement.classList.add("project");
 
-      const thumbnailUrl = `https://avatars.githubusercontent.com/u/${project.owner_id}?v=4`;
-
       projectElement.innerHTML = `
-            <img src="${thumbnailUrl}" alt="${project.name} Thumbnail">
+            <img src="${project.thumbnail}" alt="${project.name} Thumbnail">
             <h2>${project.name}</h2>
             <p>${project.description || "No description provided."}</p>
             <p><strong>Language:</strong> ${project.language || "N/A"}</p>
