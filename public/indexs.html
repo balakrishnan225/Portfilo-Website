@@ -1,216 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Projects</title>
-    <link rel="stylesheet" href="stylez.css">
-    <style>
- body{
-    background-color:rgb(14, 11, 11) ;
- }
-        .project-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
-            background-color: #000; 
-        }
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Projects</title>
+  <link rel="stylesheet" href="stylez.css" />
+  <style>
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Fira Code;
+   }
+   body {
+    background-color: rgb(14, 11, 11);
+    color: #fff;
+   }
+   .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background-color: #000;
+   }
 
-        .project {
-            flex: 1 1 calc(25% - 20px);
-            margin: 10px;
-            padding: 20px;
-            background-color: #2e8b57; 
-            border-radius: 5px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); 
-            color: #fff;
-            text-align: center;
-        }
+   .project {
+    flex: 1 1 100%; /* Each box on its own line on mobile */
+    margin: 10px;
+    padding: 20px;
+    background-color: #2e8b57;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
 
-        .project img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
+   .project img {
+    width: 100px; /* Thumbnail size */
+    height: 100px; /* Thumbnail size */
+    border-radius: 50%; /* Circle thumbnail */
+    margin-bottom: 15px;
+   }
 
-        .project h2 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-            color: #fff; 
-        }
+   .project h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #fff;
+   }
 
-        .project p {
-            font-size: 0.9em;
-            color: #e5ffe5;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1 style="color: #2e8b57;">Our Projects</h1> 
-    </header>
-    <main class="project-container">
-        <div class="project">
-            <h2>Project 1</h2>
-            <p>A web application for managing team tasks and projects with real-time collaboration and reporting features.</p>
-        </div>
-        <div class="project">
-            <h2>Project 2</h2>
-            <p>A mobile app designed for fitness tracking, including workout plans and integration with wearables.</p>
-        </div>
-        <div class="project">
-            <h2>Project 3</h2>
-            <p>An e-commerce platform with a sleek design for product browsing, secure payments, and inventory management.</p>
-        </div>
-        <div class="project">
-            <h2>Project 4</h2>
-            <p>A responsive website for a non-profit organization featuring donation portals and interactive event calendars.</p>
-        </div>
-        <div class="project">
-            <h2>Project 5</h2>
-            <p>An AI-powered chatbot for automated customer support, issue tracking, and CRM system integration.</p>
-        </div>
-        <div class="project">
-            <h2>Project 6</h2>
-            <p>A cloud-based analytics tool for visualizing key performance metrics with real-time insights and reporting.</p>
-        </div>
-        <div class="project">
-            <h2>Project 7</h2>
-            <p>A social media platform with features for user profiles, messaging, and content sharing.</p>
-        </div>
-        <div class="project">
-            <h2>Project 8</h2>
-            <p>A task automation tool for integrating various services and streamlining workflows.</p>
-        </div>
-        <div class="project">
-            <h2>Project 9</h2>
-            <p>An educational platform with interactive courses, quizzes, and progress tracking.</p>
-        </div>
-        <div class="project">
-            <h2>Project 10</h2>
-            <p>A job board website with advanced search filters and resume management capabilities.</p>
-        </div>
-        <div class="project">
-            <h2>Project 11</h2>
-            <p>A recipe sharing app with features for meal planning, ingredient tracking, and community feedback.</p>
-        </div>
-        <div class="project">
-            <h2>Project 12</h2>
-            <p>A travel planning tool that helps users organize itineraries, book accommodations, and find local attractions.</p>
-        </div>
-        <div class="project">
-            <h2>Project 13</h2>
-            <p>A real estate website featuring property listings, virtual tours, and agent contact forms.</p>
-        </div>
-        <div class="project">
-            <h2>Project 14</h2>
-            <p>A personal finance manager with budgeting tools, expense tracking, and financial goal setting.</p>
-        </div>
-        <div class="project">
-            <h2>Project 15</h2>
-            <p>A CRM system for managing customer relationships, sales pipelines, and marketing campaigns.</p>
-        </div>
-        <div class="project">
-            <h2>Project 16</h2>
-            <p>An event management platform with ticketing, scheduling, and attendee engagement features.</p>
-        </div>
-        <div class="project">
-            <h2>Project 17</h2>
-            <p>A subscription service for digital magazines with content delivery and reader analytics.</p>
-        </div>
-        <div class="project">
-            <h2>Project 18</h2>
-            <p>A project portfolio website showcasing creative works with filtering and categorization options.</p>
-        </div>
-        <div class="project">
-            <h2>Project 19</h2>
-            <p>A health tracking app with features for monitoring vital signs, medication reminders, and health tips.</p>
-        </div>
-        <div class="project">
-            <h2>Project 20</h2>
-            <p>An online learning platform offering interactive tutorials, practice exercises, and certification.</p>
-        </div>
-        <div class="project">
-            <h2>Project 21</h2>
-            <p>A collaborative document editor with real-time sharing and version control.</p>
-        </div>
-        <div class="project">
-            <h2>Project 22</h2>
-            <p>A weather application with real-time updates, forecasts, and location-based data.</p>
-        </div>
-        <div class="project">
-            <h2>Project 23</h2>
-            <p>An online forum with discussion threads, user profiles, and moderation tools.</p>
-        </div>
-        <div class="project">
-            <h2>Project 24</h2>
-            <p>A booking system for services with calendar integration, availability checks, and appointment scheduling.</p>
-        </div>
-        <div class="project">
-            <h2>Project 25</h2>
-            <p>An online auction platform with bidding features, item management, and payment processing.</p>
-        </div>
-        <div class="project">
-            <h2>Project 26</h2>
-            <p>A job application tracking system with resume parsing, application status updates, and interview scheduling.</p>
-        </div>
-        <div class="project">
-            <h2>Project 27</h2>
-            <p>A content management system for blogs with post creation, category management, and user comments.</p>
-        </div>
-        <div class="project">
-            <h2>Project 28</h2>
-            <p>A vehicle tracking system with GPS integration, route planning, and real-time location updates.</p>
-        </div>
-        <div class="project">
-            <h2>Project 29</h2>
-            <p>A digital note-taking app with organization features, sync capabilities, and multimedia support.</p>
-        </div>
-        <div class="project">
-            <h2>Project 30</h2>
-            <p>An appointment booking app for healthcare providers with patient scheduling and medical history management.</p>
-        </div>
-        <div class="project">
-            <h2>Project 31</h2>
-            <p>A real-time chat application with group messaging, file sharing, and user presence indicators.</p>
-        </div>
-        <div class="project">
-            <h2>Project 32</h2>
-            <p>A personal blog with features for custom themes, user comments, and post management.</p>
-        </div>
-        <div class="project">
-            <h2>Project 33</h2>
-            <p>A booking system for rental properties with availability checks, payment integration, and user reviews.</p>
-        </div>
-        <div class="project">
-            <h2>Project 34</h2>
-            <p>A virtual reality experience for interactive tours, educational simulations, and immersive environments.</p>
-        </div>
-        <div class="project">
-            <h2>Project 35</h2>
-            <p>A smart home control system with features for managing lighting, climate, and security remotely.</p>
-        </div>
-        <div class="project">
-            <h2>Project 36</h2>
-            <p>An online survey tool with customizable questionnaires, response tracking, and data analysis.</p>
-        </div>
-        <div class="project">
-            <h2>Project 37</h2>
-            <p>A music streaming service with personalized playlists, artist recommendations, and offline listening options.</p>
-        </div>
-        <div class="project">
-            <h2>Project 38</h2>
-            <p>A language learning app with interactive lessons, vocabulary practice, and speech recognition.</p>
-        </div>
-        <div class="project">
-            <h2>Project 39</h2>
-            <p>A video conferencing tool with features for screen sharing, meeting recording, and participant management.</p>
-        </div>
-        <div class="project">
-            <h2>Project 40</h2>
-            <p>An inventory management system for tracking stock levels, orders, and supplier information.</p>
-        </div>
-    </main>
-</body>
+   .project p {
+    font-size: 0.9em;
+    color: #e5ffe5;
+    margin-bottom: 15px;
+   }
+
+   .project a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+   }
+
+   .project a:hover {
+    background-color: #fff;
+    color: #000;
+   }
+
+   @media (min-width: 768px) {
+    .project {
+     flex: 1 1 calc(50% - 40px); /* Two projects per row on tablets */
+    }
+   }
+
+   @media (min-width: 1024px) {
+    .project {
+     flex: 1 1 calc(33.33% - 40px); /* Three projects per row on desktops */
+    }
+   }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1 style="color: #2e8b57; text-align: center">Our Projects</h1>
+  </header>
+  <main class="project-container" id="project-container">
+   <!-- Dynamic content will be loaded here -->
+  </main>
+  <script>
+   // Function to fetch and display repositories
+   async function loadProjects() {
+    try {
+     const response = await fetch("/api/projects");
+     const projects = await response.json();
+
+     const projectContainer = document.getElementById("project-container");
+     projectContainer.innerHTML = ""; 
+
+     projects.forEach(project => {
+      const projectElement = document.createElement("div");
+      projectElement.classList.add("project");
+
+      const thumbnailUrl = `https://avatars.githubusercontent.com/u/${project.owner_id}?v=4`;
+
+      projectElement.innerHTML = `
+            <img src="${thumbnailUrl}" alt="${project.name} Thumbnail">
+            <h2>${project.name}</h2>
+            <p>${project.description || "No description provided."}</p>
+            <p><strong>Language:</strong> ${project.language || "N/A"}</p>
+            <a href="${project.url}" target="_blank">View Repository</a>
+          `;
+
+      projectContainer.appendChild(projectElement);
+     });
+    } catch (error) {
+     console.error("Failed to load projects:", error);
+    }
+   }
+   window.onload = loadProjects;
+  </script>
+ </body>
 </html>
