@@ -67,7 +67,7 @@ nav {
 }
 
 .nav-links a:hover {
- color: var(--primary-color);
+ color: #a0a0a0;
 }
 
 .hamburger {
