@@ -10,7 +10,7 @@
  margin: 0;
  padding: 0;
  box-sizing: border-box;
- font-family: Fira Code;
+ font-family: Fira Code, sans-serif;
 }
 
 body {
@@ -25,6 +25,7 @@ body {
  max-width: 1200px;
  margin: 0 auto;
  padding: 0 20px;
+ width: 100%;
 }
 
 header {
@@ -35,12 +36,14 @@ header {
  width: 100%;
  top: 0;
  z-index: 1000;
+ backdrop-filter: blur(5px);
 }
 
 nav {
  display: flex;
  justify-content: space-between;
  align-items: center;
+ flex-wrap: wrap;
 }
 
 .logo {
@@ -71,6 +74,7 @@ nav {
  display: none;
  cursor: pointer;
 }
+
 .hero {
  height: 100vh;
  display: flex;
@@ -78,7 +82,11 @@ nav {
  justify-content: center;
  text-align: center;
  color: #fafafa;
+ position: relative;
+ overflow: hidden;
+ width: 100%;
 }
+
 @keyframes gradientAnimation {
  0% {
   background-position: 0% 0%;
@@ -91,28 +99,21 @@ nav {
  }
 }
 
-.hero {
- position: relative;
- overflow: hidden;
- width: 100%;
- height: 100vh; /* Full height */
-}
-
 #bg-video {
  position: absolute;
  top: 50%;
  left: 50%;
  width: 100%;
  height: 100%;
- object-fit: cover; /* Cover the entire section */
+ object-fit: cover;
  transform: translate(-50%, -50%);
- z-index: -1; /* Behind the content */
+ z-index: -1;
 }
 
 .hero-content {
- position: relative; /* Make sure content is above the video */
+ position: relative;
  z-index: 1;
- color: white; /* Ensure text is visible */
+ color: white;
  text-align: center;
  padding: 20px;
 }
@@ -169,10 +170,12 @@ h2 {
  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
  border: 1px solid rgba(255, 255, 255, 0.2);
 }
+
 .developer:hover {
  transform: scale(1.03);
  transition: 0.3s ease-in;
 }
+
 .developer img {
  width: 150px;
  height: 150px;
@@ -204,31 +207,27 @@ h2 {
  font-size: 0.9rem;
 }
 
-/* Apply different background colors to each skill */
 .skill:nth-child(1) {
- background-color: #e63946; /* Red */
+ background-color: #e63946;
 }
-
 .skill:nth-child(2) {
- background-color: #457b9d; /* Blue */
+ background-color: #457b9d;
 }
-
 .skill:nth-child(3) {
- background-color: #2a9d8f; /* Teal */
+ background-color: #2a9d8f;
 }
-
 .skill:nth-child(4) {
- background-color: #f4a261; /* Orange */
+ background-color: #f4a261;
 }
-
 .skill:nth-child(5) {
- background-color: #e76f51; /* Coral */
+ background-color: #e76f51;
 }
 
 .portfolio-filters {
  display: flex;
  justify-content: center;
  margin-bottom: 2rem;
+ flex-wrap: wrap;
 }
 
 .filter-btn {
@@ -236,7 +235,7 @@ h2 {
  border: 2px solid #fafafa;
  color: #fafafa;
  padding: 0.5rem 1rem;
- margin: 0 0.5rem;
+ margin: 0.5rem;
  border-radius: 5px;
  cursor: pointer;
  transition: all 0.3s ease;
@@ -250,7 +249,7 @@ h2 {
 
 .portfolio-grid {
  display: grid;
- grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
  gap: 2rem;
 }
 
@@ -304,7 +303,8 @@ h2 {
  padding: 2rem;
  border-radius: 10px;
  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
- height: 450px;
+ height: auto;
+ min-height: 450px;
 }
 
 .form-group {
@@ -324,29 +324,24 @@ h2 {
  width: 100%;
  padding: 0.8rem;
  font-size: 1rem;
- border: none;
- border-bottom: #fafafa;
+ border: 1px solid rgba(255, 255, 255, 0.2);
  color: #fafafa;
  outline: none;
  border-radius: 10px;
 }
-.form-group input {
- border: 1px solid rgba(255, 255, 255, 0.2);
-}
-.form-group textarea {
- border: 1px solid rgba(255, 255, 255, 0.2);
-}
+
 .social-links {
  display: flex;
  justify-content: center;
  margin-top: 2rem;
  color: #fafafa;
+ flex-wrap: wrap;
 }
 
 .social-links a {
  color: var(--secondary-color);
  font-size: 1.5rem;
- margin: 0 1rem;
+ margin: 0.5rem;
  transition: color 0.3s ease;
 }
 
@@ -387,6 +382,23 @@ footer {
 
  .developer {
   flex-basis: 100%;
+ }
+
+ .hero-content h1 {
+  font-size: 2rem;
+ }
+
+ .hero-content p {
+  font-size: 1rem;
+ }
+
+ .btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+ }
+
+ .portfolio-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
  }
 }
 
@@ -433,7 +445,7 @@ button.show-message-btn {
  color: #000714;
  font-weight: 600;
  position: relative;
- margin-top: 100px; 
+ margin-top: 20px;
 }
 
 button.show-message-btn:hover {
@@ -471,53 +483,130 @@ p {
 }
 
 .testimonial-container {
-    display: flex; 
-    width: 100%;
-    max-width: 100%;
-    height: 310px; 
-    overflow-x: auto; 
-    overflow-y: hidden;
-    padding: 10px;
-    border: 2px solid #000;
-    background-color: #000000;
-    margin: 20px auto;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    scrollbar-width: none;
+ display: flex;
+ width: 100%;
+ max-width: 100%;
+ height: auto;
+ overflow-x: auto;
+ overflow-y: hidden;
+ padding: 10px;
+ border: 2px solid #000;
+ background-color: #000000;
+ margin: 20px auto;
+ box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+ scrollbar-width: none;
 }
+
 .testimonial {
-    flex: 0 0 auto;
-    width: 300px;
-    margin-right: 15px;
-    padding: 15px;
-    background-color: #000000;
-    color: #ffffff;
-    border-left: 5px solid green;
-    border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+ flex: 0 0 auto;
+ width: 300px;
+ margin-right: 15px;
+ padding: 15px;
+ background-color: #000000;
+ color: #ffffff;
+ border-left: 5px solid green;
+ border-radius: 5px;
+ box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.show-message-btn{
-    position: relative;
-    top: -100px;
+.boyz {
+ background-color: #fafafa;
+ color: #333;
+ padding: 0.8rem 1.6rem;
+ border: none;
+ border-radius: 8px;
+ font-size: 1rem;
+ font-weight: 700;
+ cursor: pointer;
+ transition: background-color 0.3s ease;
+ text-decoration: none;
+ display: inline-block;
+ margin-bottom: 50px;
+ margin-top: 20px;
 }
 
-header{
-    backdrop-filter: blur(5px);
+@media screen and (max-width: 600px) {
+ .hero-content h1 {
+  font-size: 1.8rem;
+ }
+
+ .hero-content p {
+  font-size: 0.9rem;
+ }
+
+ .btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+ }
+
+ .developer img {
+  width: 100px;
+  height: 100px;
+ }
+
+ .developer h3 {
+  font-size: 1.2rem;
+ }
+
+ .skill {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+ }
+
+ .portfolio-grid {
+  grid-template-columns: 1fr;
+ }
+
+ .contact-form {
+  padding: 1rem;
+ }
+
+ .boyz {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+ }
 }
-.boyz{
-    background-color: #fafafa;
-    color: #333;
-    padding: 0.8rem 1.6rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-    right: -450px;
-    margin-bottom: 50px;
-    bottom: -35px;
+
+@media screen and (max-width: 400px) {
+ .hero-content h1 {
+  font-size: 1.5rem;
+ }
+
+ .hero-content p {
+  font-size: 0.8rem;
+ }
+
+ .btn {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.7rem;
+ }
+
+ .developer {
+  padding: 1rem;
+ }
+
+ .developer img {
+  width: 80px;
+  height: 80px;
+ }
+
+ .developer h3 {
+  font-size: 1rem;
+ }
+
+ .skill {
+  font-size: 0.7rem;
+  padding: 0.1rem 0.4rem;
+ }
+
+ .contact-form {
+  padding: 0.8rem;
+ }
+
+ .boyz {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+ }
 }

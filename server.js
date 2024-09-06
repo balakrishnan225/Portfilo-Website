@@ -55,6 +55,9 @@ app.get("/api/projects", async (req, res) => {
  }
 });
 
+app.get("/projects", (req, res) => {
+ res.sendFile(path.join(__dirname, "public", "project.html"));
+});
 app.get("*", (req, res) => {
  res.sendFile(join(__dirname, "public", "index.html"));
 });
