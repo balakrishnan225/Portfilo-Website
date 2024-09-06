@@ -295,6 +295,11 @@ h2 {
  font-weight: bold;
 }
 
+.call-to-action {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
 .contact-form {
  max-width: 600px;
  margin: 0 auto;
