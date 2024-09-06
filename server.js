@@ -1,16 +1,16 @@
 import express from "express";
 import { fileURLToPath } from "url";
-import { dirname, join } from "path";
+import path from "path";
 import fetch from "node-fetch";
 import { load } from "cheerio";
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.static(join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 async function fetchRepoThumbnail(repoUrl) {
  try {
@@ -24,6 +24,7 @@ async function fetchRepoThumbnail(repoUrl) {
   return "";
  }
 }
+
 app.get("/api/projects", async (req, res) => {
  try {
   const username = "FXastro"; // Replace with your GitHub username
@@ -58,8 +59,9 @@ app.get("/api/projects", async (req, res) => {
 app.get("/projects", (req, res) => {
  res.sendFile(path.join(__dirname, "public", "project.html"));
 });
+
 app.get("*", (req, res) => {
- res.sendFile(join(__dirname, "public", "index.html"));
+ res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 app.listen(port, () => {
