@@ -369,7 +369,11 @@ footer {
  }
 
  .nav-links.show {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
   display: flex;
+  justify-content: center;
+  align-items: center;
  }
 
  .nav-links li {

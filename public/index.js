@@ -1,4 +1,6 @@
-// Mobile Navigation
+/**
+ * Toggles the mobile navigation menu.
+ */
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 
@@ -6,18 +8,28 @@ hamburger.addEventListener("click", () => {
  navLinks.classList.toggle("show");
 });
 
-// Smooth Scrolling
+/**
+ * Implements smooth scrolling for anchor links.
+ */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
  anchor.addEventListener("click", function (e) {
   e.preventDefault();
 
-  document.querySelector(this.getAttribute("href")).scrollIntoView({
-   behavior: "smooth",
-  });
+  const targetId = this.getAttribute("href").substring(1);
+  const targetElement = document.getElementById(targetId);
+
+  if (targetElement) {
+   window.scrollTo({
+    top: targetElement.offsetTop - 60,
+    behavior: "smooth",
+   });
+  }
  });
 });
 
-// Portfolio Filtering
+/**
+ * Implements portfolio item filtering.
+ */
 const filterButtons = document.querySelectorAll(".filter-btn");
 const portfolioItems = document.querySelectorAll(".portfolio-item");
 
@@ -38,7 +50,9 @@ filterButtons.forEach(button => {
  });
 });
 
-// Form Validation
+/**
+ * Handles form validation for the contact form.
+ */
 const contactForm = document.querySelector(".contact-form");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
@@ -52,6 +66,10 @@ contactForm.addEventListener("submit", e => {
  }
 });
 
+/**
+ * Validates the contact form inputs.
+ * @returns {boolean} True if the form is valid, false otherwise.
+ */
 function validateForm() {
  let isValid = true;
 
@@ -82,6 +100,11 @@ function validateForm() {
  return isValid;
 }
 
+/**
+ * Displays an error message for a form input.
+ * @param {HTMLElement} input - The input element.
+ * @param {string} message - The error message to display.
+ */
 function showError(input, message) {
  const formGroup = input.parentElement;
  const error = formGroup.querySelector(".error-message") || document.createElement("div");
@@ -93,6 +116,10 @@ function showError(input, message) {
  input.classList.add("error");
 }
 
+/**
+ * Removes the error message and styling from a form input.
+ * @param {HTMLElement} input - The input element.
+ */
 function removeError(input) {
  const formGroup = input.parentElement;
  const error = formGroup.querySelector(".error-message");
@@ -102,12 +129,19 @@ function removeError(input) {
  input.classList.remove("error");
 }
 
+/**
+ * Validates an email address.
+ * @param {string} email - The email address to validate.
+ * @returns {boolean} True if the email is valid, false otherwise.
+ */
 function isValidEmail(email) {
  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
  return re.test(String(email).toLowerCase());
 }
 
-// Intersection Observer for Animations
+/**
+ * Implements intersection observer for animations.
+ */
 const sections = document.querySelectorAll("section");
 
 const observer = new IntersectionObserver(
@@ -120,6 +154,10 @@ const observer = new IntersectionObserver(
  },
  { threshold: 0.1 }
 );
+
+/**
+ * Handles the "Show Message" button click event.
+ */
 document.querySelector(".show-message-btn").addEventListener("click", function () {
  const messageDiv = document.querySelector(".thank-you-message");
 
@@ -138,38 +176,46 @@ document.querySelector(".show-message-btn").addEventListener("click", function (
   messageDiv.classList.add("hidden");
  }, 4500);
 });
-document.addEventListener('DOMContentLoaded', () => {
-    const readMoreLinks = document.querySelectorAll('.read-more');
 
-    readMoreLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const testimonialText = link.previousElementSibling;
+/**
+ * Implements "Read More" functionality for testimonials.
+ */
+document.addEventListener("DOMContentLoaded", () => {
+ const readMoreLinks = document.querySelectorAll(".read-more");
 
-            if (testimonialText.classList.contains('expanded')) {
-                testimonialText.classList.remove('expanded');
-                link.textContent = 'Read More';
-            } else {
-                testimonialText.classList.add('expanded');
-                link.textContent = 'Read Less';
-            }
-        });
-    });
+ readMoreLinks.forEach(link => {
+  link.addEventListener("click", e => {
+   e.preventDefault();
+   const testimonialText = link.previousElementSibling;
+
+   if (testimonialText.classList.contains("expanded")) {
+    testimonialText.classList.remove("expanded");
+    link.textContent = "Read More";
+   } else {
+    testimonialText.classList.add("expanded");
+    link.textContent = "Read Less";
+   }
+  });
+ });
 });
-const testimonialContainer = document.querySelector('.testimonial-container');
 
+/**
+ * Implements auto-scrolling for testimonials.
+ */
+const testimonialContainer = document.querySelector(".testimonial-container");
+
+/**
+ * Scrolls the testimonial container automatically.
+ */
 function autoScrollTestimonials() {
-    testimonialContainer.scrollBy({
-        left: 1, 
-        behavior: 'smooth'
-    });
-    
+ testimonialContainer.scrollBy({
+  left: 1,
+  behavior: "smooth",
+ });
 
-    if (testimonialContainer.scrollLeft + testimonialContainer.clientWidth >= testimonialContainer.scrollWidth) {
-        testimonialContainer.scrollLeft = 0;
-    }
+ if (testimonialContainer.scrollLeft + testimonialContainer.clientWidth >= testimonialContainer.scrollWidth) {
+  testimonialContainer.scrollLeft = 0;
+ }
 }
 
-
-setInterval(autoScrollTestimonials, 50); 
-
+setInterval(autoScrollTestimonials, 50);
